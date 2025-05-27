@@ -2,12 +2,6 @@ use once_cell::sync::OnceCell;
 use parking_lot::RwLock;
 use wasm_bindgen::prelude::*;
 
-#[wasm_bindgen(start)]
-pub fn main_wasm_init() {
-    console_error_panic_hook::set_once();
-    web_sys::console::log_1(&"WASM Root Initialized (console_error_panic_hook set)".into());
-}
-
 #[derive(Debug)]
 pub struct Ipfs {
     pub realm: RwLock<String>,

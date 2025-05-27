@@ -43,7 +43,7 @@ async function run() {
 
     try {
         logToMain("Initializing Wasm module (Instance A) on main thread...");
-        await init(wasmBytes, memory);
+        await init({wasmBytes, memory});
         logToMain("Wasm module (Instance A) initialized on main thread.");
     } catch (error) {
         logToMain(`Error initializing Wasm (Instance A): ${error}`);
